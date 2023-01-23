@@ -1,0 +1,112 @@
+.workpreview-section {
+  .workpreview-title {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    @media screen and (min-width: 1450px) {
+      font-size: 4.3rem;
+    }
+    @media screen and (max-width: 680px) {
+      font-size: 2.8rem;
+    }
+  }
+  .workpreview-img-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 680px) {
+      flex-direction: column;
+    }
+    .section1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 800px;
+        // width: 333px;
+        margin: 1rem 1rem;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+          rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        @media screen and (max-width: 1200px) {
+          height: 600px;
+        }
+        @media screen and (max-width: 900px) {
+          height: 450px;
+        }
+        @media screen and (max-width: 680px) {
+          height: 600px;
+          &:first-child {
+            margin-top: 4rem;
+          }
+        }
+        @media screen and (max-width: 480px) {
+          height: 450px;
+          margin: 0.8rem 1rem;
+        }
+      }
+    }
+    .section2 {
+      margin-top: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 800px;
+        // width: 333px;
+        margin: 1rem 1rem;
+        object-fit: cover;
+        border-radius: 5px;
+
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+          rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+          rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        @media screen and (max-width: 1200px) {
+          height: 600px;
+        }
+        @media screen and (max-width: 900px) {
+          height: 450px;
+        }
+        @media screen and (max-width: 680px) {
+          height: 600px;
+        }
+        @media screen and (max-width: 480px) {
+          height: 450px;
+          margin: 0.8rem 1rem;
+        }
+      }
+      @media screen and (max-width: 680px) {
+        margin-top: 0;
+      }
+    }
+  }
+  .view-more {
+    margin: 4rem 0;
+    text-align: center;
+
+    a {
+      font-family: "Darker Grotesque", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-decoration: none;
+      color: black;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: 2rem;
+      padding: 1rem;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}

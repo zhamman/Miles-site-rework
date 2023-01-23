@@ -1,0 +1,55 @@
+$main: #f0d8bb;
+$white: #ffffff;
+$black: #1e1f13;
+
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(146, 146, 146);
+  color: $black;
+  &:before {
+    animation: grain 8s steps(10) infinite;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png");
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    z-index: -1;
+  }
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}

@@ -1,0 +1,127 @@
+@import "../App.scss";
+
+.container {
+  font-family: "Darker Grotesque", sans-serif;
+
+  .header-container {
+    z-index: 100;
+    font-weight: 700;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1330px;
+    padding: 3rem 2rem;
+
+    .logo {
+      letter-spacing: 1px;
+      @media screen and (max-width: 360px) {
+        font-size: 0.8rem;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      .link {
+        font-family: "Darker Grotesque";
+        text-decoration: none;
+        color: #1e1f13;
+        padding-left: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        &:hover {
+          .link-container {
+            transform: translateY(-16px);
+          }
+          .link-title1 {
+            transform: rotate(0deg);
+          }
+        }
+        .mask {
+          position: relative;
+          padding: 0;
+          height: 16px;
+          overflow: hidden;
+          .link-container {
+            transition: transform 0.4s ease;
+            .title {
+              display: block;
+              font-size: 16px;
+              line-height: 16px;
+              transition: transform 0.4s ease;
+            }
+            .link-title1 {
+              transform-origin: right center;
+            }
+
+            .link-title2 {
+              transform-origin: left center;
+              transform: rotate(0deg);
+              &:hover {
+                transform: rotate(0deg);
+              }
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 680px) {
+        display: none;
+      }
+    }
+    .mobile-nav {
+      @media screen and (min-width: 681px) {
+        display: none;
+      }
+      .mobile-menu-button {
+        @media screen and (max-width: 360px) {
+          font-size: 0.8rem;
+        }
+      }
+      .mobile-menu {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        transition: all 0.2s ease;
+
+        .mobile-menu-button {
+        }
+        .mobile-nav-links {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          height: 100vh;
+          width: 100%;
+          background-color: rgb(216, 214, 212);
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          justify-content: center;
+
+          .nav-link {
+            text-decoration: none;
+            color: black;
+            font-size: 2rem;
+            padding: 2rem;
+            transition: all 0.2s ease;
+            letter-spacing: 1.5px;
+            &:hover {
+              transform: scale(1.3);
+            }
+          }
+        }
+      }
+    }
+  }
+}
