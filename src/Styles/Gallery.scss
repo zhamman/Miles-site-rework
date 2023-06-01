@@ -92,7 +92,24 @@
     border-radius: 5px;
   }
 }
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .gallery-container {
+  .loading {
+    position: relative;
+
+    width: 6rem;
+    z-index: 90;
+    height: 6rem;
+    border: 5px solid white;
+    border-radius: 50%;
+    border-top-color: rgb(29, 29, 29);
+    animation: spinner 1s linear infinite;
+    margin: 0 auto;
+  }
   .gallery-title {
     margin: auto;
     text-align: center;

@@ -16,7 +16,7 @@ const ContactPage = () => {
         </div>
         <div className="second-section">
           <p className="p1">want to collaborate? </p>
-          <p className="p2">Aavailable for freelance work!</p>
+          <p className="p2">Available for freelance work!</p>
           <a href="mailto: milesmazel@gmail.com" className="p3">
             milesmazel@gmail.com
           </a>

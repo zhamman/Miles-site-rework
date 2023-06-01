@@ -1,0 +1,13 @@
+.loading {
+  position: relative;
+  width: 6rem;
+  z-index: 90;
+  height: 6rem;
+  border: 5px solid var(--golden);
+  border-radius: 50%;
+  border-top-color: var(--dark-green);
+  animation: spinner 2s linear infinite;
+}
+.loading-center {
+  margin: 0 auto;
+}

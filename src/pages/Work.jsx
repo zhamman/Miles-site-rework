@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Photos } from "../components/images.jsx";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "../Styles/Gallery.scss";
@@ -7,9 +7,17 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 import { IconContext } from "react-icons";
 import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 import { RiCloseFill } from "react-icons/ri";
+import Loading from "../components/Loading.js";
 
 const Gallery = () => {
   const [data, setData] = useState({ img: "", i: 0 });
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
 
   const viewImage = (img, i) => {
     setData({ img, i });
@@ -49,34 +57,38 @@ const Gallery = () => {
       )}
       <div className="gallery-container">
         <div className="gallery-title">Gallery</div>
-        <div className="gallery-display">
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-          >
-            <Masonry gutter="15px">
-              {Photos.map((image, i) => (
-                <img
-                  key={i}
-                  src={image}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    objectFit: "cover",
-                    cursor: "pointer",
-                    borderRadius: "5px",
-                    boxShadow:
-                      "box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                  }}
-                  alt=""
-                  onClick={() => {
-                    viewImage(image, i);
-                  }}
-                />
-              ))}
-            </Masonry>
-          </ResponsiveMasonry>
-        </div>
+        {isLoading ? (
+          <div className="loading"></div>
+        ) : (
+          <div className="gallery-display">
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+            >
+              <Masonry gutter="15px">
+                {Photos.map((image, i) => (
+                  <img
+                    key={i}
+                    src={image}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      objectFit: "cover",
+                      cursor: "pointer",
+                      borderRadius: "5px",
+                      boxShadow:
+                        "box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                    }}
+                    alt=""
+                    onClick={() => {
+                      viewImage(image, i);
+                    }}
+                  />
+                ))}
+              </Masonry>
+            </ResponsiveMasonry>
+          </div>
+        )}
       </div>
     </>
   );
