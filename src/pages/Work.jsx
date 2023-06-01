@@ -3,11 +3,9 @@ import { Photos } from "../components/images.jsx";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "../Styles/Gallery.scss";
 import Header from "../components/Header.jsx";
-import { GrNext, GrPrevious } from "react-icons/gr";
 import { IconContext } from "react-icons";
 import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 import { RiCloseFill } from "react-icons/ri";
-import Loading from "../components/Loading.js";
 
 const Gallery = () => {
   const [data, setData] = useState({ img: "", i: 0 });
