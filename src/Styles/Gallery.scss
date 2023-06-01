@@ -131,19 +131,17 @@
     margin: auto;
 
     max-width: 2560px;
-    width: 90%;
+    width: 95%;
     padding: 20px;
     Mansory {
       padding: 20px;
-    }
-    @media screen and (max-width: 500px) {
-      width: 95%;
     }
   }
   .img-container {
     overflow: hidden;
     img {
       transition: all 0.3s ease;
+
       @media screen and (min-width: 500px) {
         &:hover {
           transform: scale(1.05);
