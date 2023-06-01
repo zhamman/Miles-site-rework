@@ -6,7 +6,9 @@ const MainPage = () => {
     <div className="main-container">
       <div className="home-container">
         <div className="home-image">
-          <img src="../Images/miles-smoke.png" alt="" />
+          <div className="img-container">
+            <img src="../Images/miles-smoke.png" alt="" />
+          </div>
           <div className="description">
             <div className="name">New York</div>
             <div className="occupation">Photography </div>
