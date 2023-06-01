@@ -8,12 +8,20 @@ const WorkPreview = () => {
       <h1 className="workpreview-title">Gallery</h1>
       <div className="workpreview-img-section">
         <div className="section1">
-          <img src="../images-2/img9.jpg" alt="" />
-          <img src="../images-2/img11.jpg" alt="" />
+          <div className="img-container">
+            <img src="../images-2/img9.jpg" alt="" />
+          </div>
+          <div className="img-container">
+            <img src="../images-2/img11.jpg" alt="" />
+          </div>
         </div>
         <div className="section2">
-          <img src="../images-2/img28.jpg" alt="" />
-          <img src="../images-2/img13.jpg" alt="" />
+          <div className="img-container">
+            <img src="../images-2/img28.jpg" alt="" />
+          </div>
+          <div className="img-container">
+            <img src="../images-2/img13.jpg" alt="" />
+          </div>
         </div>
       </div>
       <div className="view-more">
