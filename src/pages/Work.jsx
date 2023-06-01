@@ -64,24 +64,26 @@ const Gallery = () => {
             >
               <Masonry gutter="15px">
                 {Photos.map((image, i) => (
-                  <img
-                    key={i}
-                    src={image}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      display: "flex",
-                      objectFit: "cover",
-                      cursor: "pointer",
-                      borderRadius: "5px",
-                      boxShadow:
-                        "box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                    }}
-                    alt=""
-                    onClick={() => {
-                      viewImage(image, i);
-                    }}
-                  />
+                  <div className="img-container">
+                    <img
+                      key={i}
+                      src={image}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        objectFit: "cover",
+                        cursor: "pointer",
+                        borderRadius: "5px",
+                        boxShadow:
+                          "box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                      }}
+                      alt=""
+                      onClick={() => {
+                        viewImage(image, i);
+                      }}
+                    />
+                  </div>
                 ))}
               </Masonry>
             </ResponsiveMasonry>
