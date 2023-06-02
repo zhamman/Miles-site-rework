@@ -10,7 +10,7 @@ const MainPage = () => {
             <img src="../Images/miles-smoke.png" alt="" />
           </div>
           <div className="description">
-            <div className="name">New York</div>
+            <div className="name">Miles Mazel</div>
             <div className="occupation">Photography </div>
           </div>
         </div>

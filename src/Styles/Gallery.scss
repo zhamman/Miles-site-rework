@@ -140,13 +140,7 @@
   .img-container {
     overflow: hidden;
     img {
-      transition: all 0.3s ease;
-
-      @media screen and (min-width: 500px) {
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
+     
     }
   }
 }

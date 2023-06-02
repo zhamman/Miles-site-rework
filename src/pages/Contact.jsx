@@ -24,17 +24,19 @@ const Contact = () => {
         <div className="socials">
           <ul>
             <li>
-              <a href="">Facebook</a>
+              <a href="#">Facebook</a>
             </li>
             <li>
-              <a href="https://www.instagram.com/milesmazel/?hl=en">
+              <a
+                href="https://www.instagram.com/photosbymiles/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Instagram
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/miles-mazel-42460b123/">
-                LinkedIn
-              </a>
+              <a href="#">LinkedIn</a>
             </li>
           </ul>
           <div className="initials">
